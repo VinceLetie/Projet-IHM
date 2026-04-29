@@ -5,22 +5,592 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.auth-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #2da7b4b6 50%, #ffffff 100%);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.auth-top-button {
+  position: absolute;
+  top: 26px;
+  right: 36px;
+  background-color: #2da7b4;
+  color: rgb(255, 255, 255);
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.auth-top-button:hover {
+  background-color: #258f9c;
+}
+
+.auth-container {
+  width: 500px;
+  background-color: rgba(172, 172, 172, 0.32);
+  padding: 28px 14px 32px;
+}
+
+.auth-container h1 {
+  font-size: 24px;
+  margin-left: 14px;
+  margin-bottom: 4px;
+}
+
+.auth-container p {
+  font-size: 16px;
+  margin-left: 14px;
+  margin-bottom: 22px;
+}
+
+.auth-form {
+  background-color: rgba(255, 255, 255, 0.57);
+  border-radius: 8px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.auth-input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #979797;
+  border-radius: 9px;
+  padding: 0 12px;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 18px;
+  background-color: white;
+}
+
+.auth-input:focus {
+  border-color: #2fa9b8;
+}
+
+.auth-password-box {
+  position: relative;
+}
+
+.auth-password-input {
+  padding-right: 48px;
+}
+
+.auth-eye-button {
+  position: absolute;
+  right: 12px;
+  top: 9px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.auth-submit-button {
+  align-self: flex-end;
+  background-color: #2fa9b8;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.auth-submit-button:hover {
+  background-color: #258f9c;
+}
+
+.auth-submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-message {
+  padding: 10px 12px;
+  border-radius: 7px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.auth-error {
+  background-color: #ffdede;
+  color: #a10000;
+}
+
+.auth-success {
+  background-color: #ddffdf;
+  color: #087a12;
+}
+
+.main-menu {
+  gap: 25px;
+  height: 102px;
+  background-image: url("/image/menu1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 28px 0 16px;
+  font-family: Arial, sans-serif;
+}
+
+.main-menu-logo {
+  width: 135px;
+  height: 64px;
+  background-color: rgba(255, 255, 255, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 28px;
+}
+
+.main-menu-logo img {
+  max-width: 115px;
+  max-height: 52px;
+  object-fit: contain;
+}
+
+.main-menu-links {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.menu-link {
+  min-width: 116px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.menu-link:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.menu-link.active {
+  background-color: rgba(190, 190, 190, 0.55);
+  color: #ffffff;
+  font-size: 16px;
+  height: 44px;
+  min-width: 130px;
+}
+
+.logout-button {
+  border: none;
+  background: transparent;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 14px;
+}
+
+.logout-button:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   COMPONENT : LISTE TAUX
+   Design fidèle à la maquette
+   ========================= */
+
+.liste-taux {
+  width: 600px;
+  height: 486px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #c5dde0;
+}
+
+/* Header gris-vert */
+.liste-taux__header {
+  height: 63px;
+  display: grid;
+  grid-template-columns: 90px 140px 185px 1fr;
+  align-items: center;
+  background: #7f8b8b;
+  color: white;
+  font-size: 22px;
+  font-weight: 400;
+  padding: 0 30px;
+}
+
+
+/* Corps scrollable de la liste */
+.liste-taux__body {
+  width: 100%;
+  max-height: 429px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Scrollbar discrète */
+.liste-taux__body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.liste-taux__body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.liste-taux__body::-webkit-scrollbar-thumb {
+  background: #7f8b8b;
+  border-radius: 10px;
+}
+
+/* Header fixe, lignes scrollables */
+.liste-taux {
+  overflow: hidden;
+}
+
+/* Ligne */
+.liste-taux__row {
+  position: relative;
+  height: 54px;
+  display: grid;
+  grid-template-columns: 90px 140px 185px 1fr;
+  align-items: center;
+  padding: 0 30px;
+  font-size: 15px;
+  color: #1f1f1f;
+}
+
+/* Lignes alternées */
+.liste-taux__row:nth-child(odd) {
+  background: #ffffff;
+}
+
+.liste-taux__row:nth-child(even) {
+  background: #c5dde0;
+}
+
+/* Bouton crayon bleu à droite */
+.liste-taux__edit {
+  position: absolute;
+  right: 34px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 29px;
+  height: 29px;
+  border: none;
+  border-radius: 50%;
+  background: #259ded;
+  color: white;
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dernier bouton proche du bas comme la maquette */
+.liste-taux__row:last-child .liste-taux__edit {
+  top: 56%;
+}
+
+/* =========================
+   COMPONENT : CARTE ECHANGE
+   Version moderne minimaliste
+   ========================= */
+
+.exchange-card {
+  position: relative;
+  width: 310px;
+  min-height: 215px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  box-sizing: border-box;
+  box-shadow: 0 14px 35px rgba(20, 80, 90, 0.18);
+}
+
+/* Haut de la carte */
+.exchange-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+/* Petit texte */
+.exchange-card__label {
+  margin: 0 0 3px;
+  color: #7b8c90;
+  font-size: 13px;
+}
+
+/* Titre paire */
+.exchange-card__head h3 {
+  margin: 0;
+  color: #1ba8b8;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* Bouton inverser */
+.exchange-card__swap {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 14px;
+  background: #eef8f9;
+  color: #111111;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Zone des champs */
+.exchange-card__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Ligne devise + montant */
+.exchange-card__field {
+  height: 52px;
+  display: flex;
+  align-items: center;
+  background: #f4f7f8;
+  border: 1px solid #e3ebed;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* Ligne résultat */
+.exchange-card__field--readonly {
+  background: #f8f8f8;
+}
+
+/* Bouton devise */
+.exchange-card__currency {
+  width: 78px;
+  height: 100%;
+  border: none;
+  border-right: 1px solid #d8e2e4;
+  background: transparent;
+  color: #111111;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Input montant */
+.exchange-card__field input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0 13px;
+  font-size: 18px;
+  color: #111111;
+}
+
+/* Liste déroulante */
+.exchange-card__dropdown {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 78px;
+  background: #ffffff;
+  border: 1px solid #dfe9eb;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+  z-index: 50;
+}
+
+/* Header dropdown */
+.exchange-card__dropdown-top {
+  height: 42px;
+  padding: 0 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f3fbfc;
+  color: #4d5a5d;
+  font-size: 14px;
+}
+
+/* Fermer */
+.exchange-card__dropdown-top button {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Liste scrollable */
+.exchange-card__list {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+/* Option */
+.exchange-card__option {
+  width: 100%;
+  border: none;
+  background: #ffffff;
+  padding: 11px 13px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Hover option */
+.exchange-card__option:hover {
+  background: #eef8f9;
+}
+
+.exchange-card__option strong {
+  width: 48px;
+  color: #111111;
+  font-size: 15px;
+}
+
+.exchange-card__option span {
+  color: #68777a;
+  font-size: 13px;
+}
+
+/* =========================
+   COMPONENT : POPUP DETAIL TRANSACTION
+   ========================= */
+
+.detail-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Fenêtre popup */
+.detail-modal {
+  position: relative;
+  width: 520px;
+  min-height: 610px;
+  background: #e7f2f4;
+  border: 1.5px solid #111;
+  border-radius: 8px;
+  padding: 54px 50px 40px;
+  box-sizing: border-box;
+}
+
+/* Bouton fermer */
+.detail-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border: none;
+  background: transparent;
+  font-size: 42px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Statut */
+.detail-modal-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 21px;
+  color: #000;
+}
+
+.detail-modal-status-dot {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #24ff00;
+}
+
+.detail-modal-date {
+  margin: 6px 0 62px 31px;
+  font-size: 20px;
+}
+
+/* Sections CLIENT / DETAILS */
+.detail-modal-section {
+  margin-bottom: 14px;
+}
+
+.detail-modal-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.detail-modal-section-title span {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #536452;
+}
+
+.detail-modal-section-title h3 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.detail-modal-section p {
+  margin: 5px 0 5px 31px;
+  font-size: 20px;
+}
+
+/* Boutons */
+.detail-modal-actions {
+  margin-top: 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-modal-cancel {
+  width: 132px;
+  height: 40px;
+  border: 1px solid #111;
+  border-radius: 10px;
+  background: #ffc107;
+  color: #000;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.detail-modal-back {
+  width: 132px;
+  height: 40px;
+  border: 1px solid #111;
+  border-radius: 10px;
+  background: #d1d1d1;
+  color: #000;
+  font-size: 20px;
+  cursor: pointer;
 }

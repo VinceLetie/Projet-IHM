@@ -1,0 +1,193 @@
+/* =========================
+   PAGE : HISTORIQUE
+   ========================= */
+
+.historique-page {
+  min-height: 100vh;
+  background: #e7f2f4;
+  padding-top: 30px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.historique-layout {
+  width: 925px;
+  margin: 0 auto;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+/* =========================
+   BLOC GAUCHE : TABLEAU
+   ========================= */
+
+.historique-table-card {
+  width: auto;
+  height: auto;
+  background: #f6fbfc;
+  border-radius: 8px;
+  padding: 16px 29px 23px;
+  box-sizing: border-box;
+}
+
+.historique-title {
+  margin: 0 0 13px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #111;
+}
+
+.historique-table {
+  width: 100%;
+  height: 442px;
+  border-radius: 9px;
+  overflow: hidden;
+  background: white;
+}
+
+.historique-table-header {
+  height: 36px;
+  display: grid;
+  grid-template-columns: 55px 78px 95px 95px 95px 75px 80px;
+  align-items: center;
+  background: #9bd8df;
+  color: #111;
+  font-size: 14px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.historique-table-body {
+  height: 406px;
+  overflow-y: auto;
+}
+
+.historique-table-row {
+  height: 37px;
+  display: grid;
+  grid-template-columns: 55px 78px 95px 95px 95px 75px 80px;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: #111;
+}
+
+.historique-table-row:nth-child(odd) {
+  background: #ffffff;
+}
+
+.historique-table-row:nth-child(even) {
+  background: #f3f7f8;
+}
+
+.historique-more-btn {
+  width: 68px;
+  height: 24px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* =========================
+   BLOC DROIT
+   ========================= */
+
+.historique-side {
+  width: 297px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Recherche */
+.historique-search-card {
+  width: 297px;
+  height: 106px;
+  background: #31aebb;
+  border-radius: 5px;
+  padding: 20px 15px;
+  box-sizing: border-box;
+}
+
+.historique-search-card h2,
+.historique-top-card h2 {
+  margin: 0 0 9px;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+
+.historique-search-box {
+  width: 270px;
+  height: 29px;
+  background: white;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.historique-search-box input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.historique-search-box button {
+  width: 34px;
+  height: 100%;
+  border: none;
+  background: white;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+/* =========================
+   TOP CLIENTS
+   ========================= */
+
+.historique-top-card {
+  width: 297px;
+  height: 243px;
+  background: #31aebb;
+  border-radius: 5px;
+  padding: 28px 14px;
+  box-sizing: border-box;
+}
+
+.historique-top-list {
+  width: 270px;
+  height: 138px;
+  background: #b9e7eb;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.historique-top-item {
+  height: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #5f6f73;
+  font-size: 18px;
+}
+
+.historique-rank {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: white;
+  color: #31aebb;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

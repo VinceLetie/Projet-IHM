@@ -1,0 +1,306 @@
+/* =========================
+   PAGE : PARAMETRES
+   ========================= */
+
+.parametres-page {
+  min-height: 100vh;
+  background: #e7f2f4;
+  padding-top: 53px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.parametres-layout {
+  width: 990px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* =========================
+   BLOC GAUCHE
+   ========================= */
+
+.parametres-main-card {
+  width: 635px;
+  height: 512px;
+  background: #bfe4e7;
+  border-radius: 17px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* =========================
+   SOUS MENU PARAMETRES
+   ========================= */
+
+.parametres-tabs {
+  width: 100%;
+  height: 38px;
+  display: flex;
+  background: #6fa5aa;
+}
+
+.parametres-tab {
+  width: 50%;
+  border: none;
+  background: #6fa5aa;
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Onglet actif commun */
+.parametres-tab--active {
+  background: #bfe4e7;
+}
+
+/* Actif à gauche */
+.parametres-tab:first-child.parametres-tab--active {
+  border-top-left-radius: 17px;
+  border-top-right-radius: 35px;
+}
+
+/* Actif à droite */
+.parametres-tab:last-child.parametres-tab--active {
+  border-top-left-radius: 35px;
+  border-top-right-radius: 17px;
+}
+
+.parametres-tab {
+  width: 50%;
+  border: none;
+  background: transparent;
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.parametres-tab--active {
+  background: #bfe4e7;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 35px;
+}
+
+/* =========================
+   RECHERCHE
+   ========================= */
+
+.parametres-search-area {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 94px;
+  box-sizing: border-box;
+}
+
+.parametres-search-box {
+  width: 132px;
+  height: 31px;
+  background: #ffffff;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.parametres-search-box input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 8px;
+  font-size: 13px;
+}
+
+.parametres-search-box button {
+  width: 31px;
+  height: 100%;
+  border: none;
+  background: #ffffff;
+  color: #000;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* =========================
+   TABLE DEVISES
+   ========================= */
+
+.parametres-devise-table {
+  width: 455px;
+  height: 340px;
+  margin-left: 90px;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.parametres-devise-header {
+  height: 44px;
+  display: grid;
+  grid-template-columns: 65px 120px 135px 90px 45px;
+  align-items: center;
+  background: #7f8787;
+  color: white;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.parametres-devise-body {
+  height: 296px;
+  overflow-y: auto;
+}
+
+.parametres-devise-row {
+  height: 38px;
+  display: grid;
+  grid-template-columns: 65px 120px 135px 90px 45px;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #111;
+}
+
+.parametres-devise-row:nth-child(odd) {
+  background: #ffffff;
+}
+
+.parametres-devise-row:nth-child(even) {
+  background: #dce6e7;
+}
+
+.parametres-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.parametres-edit-btn,
+.parametres-delete-btn {
+  width: 21px;
+  height: 21px;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.parametres-edit-btn {
+  background: #209cf0;
+}
+
+.parametres-delete-btn {
+  background: #ff3b3b;
+}
+
+/* =========================
+   TABLE TAUX EXISTANTE
+   ========================= */
+
+.parametres-taux-wrapper {
+  width: 455px;
+  height: 340px;
+  margin-left: 110px;
+  overflow: hidden;
+}
+
+.parametres-taux-wrapper .liste-taux {
+  width: 427px;
+  height: 346px;
+  border-radius: 9px;
+}
+
+.parametres-taux-wrapper .liste-taux__header {
+  height: 45px;
+  grid-template-columns: 60px 100px 130px 110px;
+  padding: 0 20px;
+  font-size: 15px;
+}
+
+.parametres-taux-wrapper .liste-taux__body {
+  max-height: 301px;
+}
+
+.parametres-taux-wrapper .liste-taux__row {
+  height: 39px;
+  grid-template-columns: 60px 100px 130px 110px;
+  padding: 0 20px;
+}
+
+.parametres-taux-wrapper .liste-taux__edit {
+  right: 24px;
+}
+
+/* =========================
+   BLOC DROIT FORMULAIRE
+   ========================= */
+
+.parametres-form-card {
+  width: 316px;
+  min-height: 335px;
+  background: #d3eef4;
+  border-radius: 20px;
+  padding: 52px 29px;
+  box-sizing: border-box;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.35);
+}
+
+.parametres-form-card h2 {
+  margin: -28px 0 18px;
+  font-size: 19px;
+  font-weight: 400;
+  color: #000;
+}
+
+.parametres-form-card label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 16px;
+  color: #000;
+}
+
+.parametres-form-card input,
+.parametres-form-card select {
+  width: 255px;
+  height: 35px;
+  border: 1px solid #999;
+  border-radius: 7px;
+  background: #ffffff;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  outline: none;
+  margin-bottom: 7px;
+}
+
+.parametres-form-card select {
+  width: 92px;
+}
+
+.parametres-form-card input[readonly] {
+  background: #9f9f9f;
+  color: #000;
+}
+
+.parametres-form-card button {
+  width: 128px;
+  height: 41px;
+  display: block;
+  margin: 31px auto 0;
+  border: 1px solid #111;
+  border-radius: 9px;
+  background: #dfff00;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+}

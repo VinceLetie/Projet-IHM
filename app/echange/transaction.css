@@ -1,0 +1,276 @@
+/* =========================
+   PAGE : TRANSACTION
+   ========================= */
+
+.transaction-page {
+  min-height: 89vh;
+  background: #e7f2f4;
+  padding-top: 34px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Conteneur principal */
+.transaction-layout {
+  width: 980px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* =========================
+   COLONNE GAUCHE
+   ========================= */
+
+.transaction-left {
+  width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+/* Bloc choix paire */
+.transaction-pair-card {
+  width: 580px;
+  height: 124px;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.transaction-pair-title {
+  margin: 0 0 9px;
+  font-size: 18px;
+  color: #000;
+}
+
+.transaction-pair-box {
+  height: 61px;
+  border: 1px solid #222;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+  gap: 18px;
+}
+
+.transaction-pair-label {
+  font-size: 18px;
+  color: #000;
+}
+
+.transaction-pair-input {
+  width: 90px;
+  height: 38px;
+  border: none;
+  background: #f4f4f4;
+  text-align: center;
+  font-size: 17px;
+  outline: none;
+}
+
+.transaction-pair-input::placeholder {
+  color: #bbbbbb;
+}
+
+.transaction-confirm-pair {
+  margin-left: auto;
+  width: 124px;
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  background: #31aebb;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* =========================
+   FORMULAIRE CLIENT
+   ========================= */
+
+.transaction-form-card {
+  width: 580px;
+  height: 465px;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 22px 16px;
+  box-sizing: border-box;
+}
+
+.transaction-form-intro {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #000;
+}
+
+.transaction-label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 18px;
+  color: #000;
+}
+
+.transaction-input {
+  width: 548px;
+  height: 43px;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 0 12px;
+  box-sizing: border-box;
+  font-size: 17px;
+  outline: none;
+  margin-bottom: 8px;
+}
+
+.transaction-amount-row {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  margin-top: 8px;
+}
+
+.transaction-currency-input {
+  width: 180px;
+  height: 43px;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  font-size: 18px;
+  outline: none;
+  text-align: right;
+}
+
+.transaction-en-text {
+  font-size: 18px;
+  color: #000;
+}
+
+.transaction-continue-btn {
+  width: 544px;
+  height: 42px;
+  margin-top: 33px;
+  border: none;
+  border-radius: 5px;
+  background: #31aebb;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.transaction-continue-btn span {
+  margin-left: 10px;
+  font-size: 42px;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+/* =========================
+   COLONNE DROITE
+   ========================= */
+
+.transaction-right {
+  width: 380px;
+  min-height: 622px;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 15px 20px 22px;
+  box-sizing: border-box;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Bloc taux */
+.transaction-rate-card {
+  width: 100%;
+}
+
+.transaction-rate-title {
+  margin: 0 0 7px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+}
+
+.transaction-rate-box {
+  width: 333px;
+  height: 153px;
+  background: #d3d3d3;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  color: #000;
+}
+
+/* =========================
+   BLOC CONFIRMATION
+   ========================= */
+
+.transaction-summary-card {
+  width: 328px;
+  height: 386px;
+  border: 1px solid #222;
+  border-radius: 7px;
+  margin: 17px auto 0;
+  padding: 58px 30px 0;
+  box-sizing: border-box;
+}
+
+.transaction-summary-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 11px;
+  font-size: 18px;
+  color: #000;
+}
+
+.transaction-check {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #43b451;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.transaction-result-label {
+  margin: 9px 0 0;
+  font-size: 18px;
+  color: #000;
+}
+
+.transaction-result-box {
+  width: 250px;
+  height: 41px;
+  background: #e9e9e9;
+  margin-top: 0;
+}
+
+.transaction-save-text {
+  margin: 18px 0 21px;
+  font-size: 18px;
+  color: #000;
+}
+
+.transaction-save-btn {
+  width: 137px;
+  height: 38px;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #111;
+  border-radius: 8px;
+  background: #e5ff00;
+  color: #000;
+  font-size: 18px;
+  cursor: pointer;
+}
