@@ -11,7 +11,7 @@
 }
 
 .parametres-layout {
-  width: 990px;
+  width: 1190px;
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
@@ -23,8 +23,8 @@
    ========================= */
 
 .parametres-main-card {
-  width: 635px;
-  height: 512px;
+  width: 925px;
+  height: 552px;
   background: #bfe4e7;
   border-radius: 17px;
   overflow: hidden;
@@ -43,7 +43,7 @@
 }
 
 .parametres-tab {
-  width: 50%;
+  width: 100%;
   border: none;
   background: #6fa5aa;
   color: #000;
@@ -95,13 +95,11 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 94px;
-  box-sizing: border-box;
+  padding-right: 108px
 }
 
 .parametres-search-box {
-  width: 132px;
-  height: 31px;
+  width: 182px;
   background: #ffffff;
   border-radius: 7px;
   display: flex;
@@ -116,7 +114,7 @@
   border: none;
   outline: none;
   padding: 0 8px;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .parametres-search-box button {
@@ -134,8 +132,9 @@
    ========================= */
 
 .parametres-devise-table {
-  width: 455px;
-  height: 340px;
+  margin-right: 110px;
+  width: auto;
+  height: 390px;
   margin-left: 90px;
   border-radius: 9px;
   overflow: hidden;
@@ -145,7 +144,7 @@
 .parametres-devise-header {
   height: 44px;
   display: grid;
-  grid-template-columns: 65px 120px 135px 90px 45px;
+  grid-template-columns: 90px 140px 185px 120px 65px;
   align-items: center;
   background: #7f8787;
   color: white;
@@ -155,14 +154,14 @@
 }
 
 .parametres-devise-body {
-  height: 296px;
+  height: auto;
   overflow-y: auto;
 }
 
 .parametres-devise-row {
-  height: 38px;
+  height: 54px;
   display: grid;
-  grid-template-columns: 65px 120px 135px 90px 45px;
+  grid-template-columns: 85px 160px 165px 120px 1fr;
   align-items: center;
   padding: 0 20px;
   box-sizing: border-box;
@@ -181,18 +180,21 @@
 .parametres-actions {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 14px;
 }
 
 .parametres-edit-btn,
 .parametres-delete-btn {
-  width: 21px;
-  height: 21px;
+  width: 29px;
+  height: 29px;
   border: none;
   border-radius: 50%;
   color: white;
-  font-size: 12px;
+  font-size: 17px;
+  line-height: 1;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
 }
 
 .parametres-edit-btn {
@@ -208,33 +210,56 @@
    ========================= */
 
 .parametres-taux-wrapper {
-  width: 455px;
-  height: 340px;
-  margin-left: 110px;
+  margin-right: 110px;
+  width: auto;
+  height: 390px;
+  margin-left: 90px;
+  border-radius: 9px;
   overflow: hidden;
+  background: #ffffff;
 }
 
 .parametres-taux-wrapper .liste-taux {
-  width: 427px;
-  height: 346px;
+  width: 100%;
+  max-width: none;
+  height: 390px;
   border-radius: 9px;
+  overflow: hidden;
+  background: #ffffff;
 }
 
 .parametres-taux-wrapper .liste-taux__header {
-  height: 45px;
-  grid-template-columns: 60px 100px 130px 110px;
+  height: 44px;
+  display: grid;
+  align-items: center;
+  background: #7f8787;
+  color: #ffffff;
   padding: 0 20px;
-  font-size: 15px;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 .parametres-taux-wrapper .liste-taux__body {
-  max-height: 301px;
+  max-height: 346px;
+  overflow-y: auto;
 }
 
 .parametres-taux-wrapper .liste-taux__row {
-  height: 39px;
-  grid-template-columns: 60px 100px 130px 110px;
+  min-height: 50px;
+  display: grid;
+  align-items: center;
   padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #111;
+}
+
+.parametres-taux-wrapper .liste-taux__row:nth-child(odd) {
+  background: #ffffff;
+}
+
+.parametres-taux-wrapper .liste-taux__row:nth-child(even) {
+  background: #dce6e7;
 }
 
 .parametres-taux-wrapper .liste-taux__edit {

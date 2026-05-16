@@ -3,18 +3,19 @@
    ========================= */
 
 .historique-page {
-  min-height: 100vh;
+  min-height: 89.3vh;
   background: #e7f2f4;
-  padding-top: 30px;
+  padding-top: 44px;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
 .historique-layout {
-  width: 925px;
+  max-width: 925px;
   margin: 0 auto;
   display: flex;
-  gap: 18px;
+  gap: 20px;
+  justify-content: center;
   align-items: flex-start;
 }
 
@@ -23,7 +24,7 @@
    ========================= */
 
 .historique-table-card {
-  width: auto;
+  max-width: 850px;
   height: auto;
   background: #f6fbfc;
   border-radius: 8px;
@@ -33,7 +34,7 @@
 
 .historique-title {
   margin: 0 0 13px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   color: #111;
 }
@@ -47,13 +48,14 @@
 }
 
 .historique-table-header {
-  height: 36px;
+  height: 46px;
   display: grid;
-  grid-template-columns: 55px 78px 95px 95px 95px 75px 80px;
+  grid-template-columns: 85px 95px 170px 120px 110px 95px 90px;
+  justify-content: center;
   align-items: center;
   background: #9bd8df;
   color: #111;
-  font-size: 14px;
+  font-size: 16px;
   padding: 0 10px;
   box-sizing: border-box;
 }
@@ -64,13 +66,13 @@
 }
 
 .historique-table-row {
-  height: 37px;
+  height: 50px;
   display: grid;
-  grid-template-columns: 55px 78px 95px 95px 95px 75px 80px;
+  grid-template-columns: 85px 95px 170px 120px 110px 95px 90px;
   align-items: center;
   padding: 0 10px;
   box-sizing: border-box;
-  font-size: 13px;
+  font-size: 14px;
   color: #111;
 }
 
@@ -106,7 +108,7 @@
 /* Recherche */
 .historique-search-card {
   width: 297px;
-  height: 106px;
+  height: 126px;
   background: #31aebb;
   border-radius: 5px;
   padding: 20px 15px;
@@ -123,11 +125,10 @@
 
 .historique-search-box {
   width: 270px;
-  height: 29px;
+  height: 40px;
   background: white;
   border-radius: 7px;
   display: flex;
-  align-items: center;
   overflow: hidden;
 }
 
@@ -155,7 +156,7 @@
 
 .historique-top-card {
   width: 297px;
-  height: 243px;
+  height: 303px;
   background: #31aebb;
   border-radius: 5px;
   padding: 28px 14px;
@@ -164,19 +165,19 @@
 
 .historique-top-list {
   width: 270px;
-  height: 138px;
+  height: 188px;
   background: #b9e7eb;
-  padding: 12px;
+  padding: 20px;
   box-sizing: border-box;
 }
 
 .historique-top-item {
-  height: 22px;
+  height: 30px;
   display: flex;
   align-items: center;
   gap: 10px;
   color: #5f6f73;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .historique-rank {
